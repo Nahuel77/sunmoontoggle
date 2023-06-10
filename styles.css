@@ -1,0 +1,142 @@
+body{
+	background-color: lightblue;
+}
+
+#modo_container{
+	display: flex;
+	background-color: rgba(0,0,0,0);
+	align-items: center;
+	justify-content: center;
+	margin: 0 10px;
+}
+
+#modo_btn{
+	background-color: #A0E3FE;
+	border: 5px solid #84C3D8;
+	width: 120px;
+	height: 60px;
+	border-radius: 33px;
+	cursor: pointer;
+	position: relative;
+	transition: 0.4s;
+}
+
+#modo_btn::before{
+	position: absolute;
+	content: "";
+	background-color: #FEDF6B;
+	border: 5px solid #DDC360;
+	width: 44px;
+	height: 44px;
+	border-radius: 30px;
+	margin: 3px;
+	transition: 0.4s;
+}
+
+#detail_1{
+	position: relative;
+	top: 30px;
+	left: 34px;
+	width: 44px;
+	height: 18px;
+	border-radius: 30px;
+	background-color: #D4D5DA;
+	transition: 0.4s;
+}
+
+#detail_1::before{
+	display: block;
+	content: "";
+	position: absolute;
+	width: 3px;
+	height: 3px;
+	top: -5px;
+	left: 6px;
+	border-radius: 30px;
+	background-color: #D4D5DA;
+	border: 5px solid #D4D5DA;
+	box-shadow: 13px 0 0 5px #D4D5DA;
+	transition: 0.4s;
+}
+
+#detail_2{
+	position: relative;
+	top: 17px;
+	left: 39px;
+	width: 34px;
+	height: 8px;
+	border-radius: 30px;
+	background-color: #FFFFFF;
+	transition: 0.4s;
+}
+
+#detail_2::before{
+	display: block;
+	content: "";
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	top: -6px;
+	left: 5px;
+	border-radius: 30px;
+	background-color: #FFFFFF;
+	border: 5px solid #FFFFFF;
+	box-shadow: 11px -3px 0 2px #FFFFFF;
+	transition: 0.4s;
+}
+
+#detail_3{
+	display: none;
+	position: relative;
+	width: 8px;
+	height: 8px;
+	top: 15px;
+	left: 100px;
+	border-radius: 30px;
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 0 4px #E0E3C8, -10px 22px 0 3px #E0E3C8, -28px -1px 0 1px #E0E3C8;
+}
+
+#detail_4{
+	display: none;
+	position: relative;
+	width: 2px;
+	height: 2px;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+	top: 15px;
+	left: 40px;
+	box-shadow: 15px 20px 0 1px #FFF, -20px -10px 0 0.3px #FFF, -30px 5px 0 0 #FFF,
+	-14px 25px 0 0.5px #FFF, 15px -13px 0 0.5px #FFF, -5px 15px 0 -0.2px #FFF;
+}
+
+input:checked + #modo_btn #detail_1 {
+	display: none;
+}
+
+input:checked + #modo_btn #detail_2 {
+	display: none;
+}
+
+input:checked + #modo_btn #detail_3 {
+	display: block;
+}
+
+input:checked + #modo_btn #detail_4 {
+	display: block;
+}
+
+input:checked + #modo_btn{
+	background-color: #3B3F47;
+	border: 5px solid #1B1821;
+}
+
+input:checked + #modo_btn::before{
+	background-color: #FFFFFF;
+	border: 5px solid #E0E3C8;
+	transform: translate(60px);
+}
+
+input{
+	display: none;
+}
